@@ -21,6 +21,6 @@ Once you are done with step 1, upload the saved spreadsheet file. It will be con
 
 ## Step 3.
 
-Download [this page](https://raw.githubusercontent.com/enfrte/duo-text/master/index.html) and [this file](https://raw.githubusercontent.com/enfrte/duo-text/master/alpine.min.js) to it's own location on your server and add the finished.json file to the same location. When you access the file, it should display the text like this...
+Download [this page](https://raw.githubusercontent.com/enfrte/duo-text/master/index.html) and [this file](https://raw.githubusercontent.com/enfrte/duo-text/master/alpine.min.js) to it's own location on your server and add the finished.json file to the same location. When you access index.html, it should display the text like this...
 
 ![image](https://user-images.githubusercontent.com/5081917/150653360-7063dda8-354a-4f68-ba8d-0a3e816ff71a.png)
