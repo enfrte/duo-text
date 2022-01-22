@@ -13,7 +13,7 @@ Once you are done with step 1, save the file as a tab separated text doc and pro
 
 ## Step 2.
 
-Once you are done with step 1, upload the saved spreadsheet file. It will be converted into a json formated text. Save it to a file called finshed.json
+Once you are done with step 1, upload the saved spreadsheet file. It will be converted into a json formated text. Save the file --it should be called finshed.json
 
 
 [Click here](http://codinginthecold.byethost5.com/demos/duo-text/step2.html) to execute step 2.
@@ -21,4 +21,6 @@ Once you are done with step 1, upload the saved spreadsheet file. It will be con
 
 ## Step 3.
 
-Download [this page](https://raw.githubusercontent.com/enfrte/duo-text/master/index.html) to it's own location on your server and add the finished.json file to the same location.
+Download [this page](https://raw.githubusercontent.com/enfrte/duo-text/master/index.html) to it's own location on your server and add the finished.json file to the same location. When you access the file, it should display the text like this...
+
+
