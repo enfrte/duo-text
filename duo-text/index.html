@@ -105,7 +105,7 @@
 					<div>
 						<p>
 							Font family: 
-							<span x-text="font_selected"></span>
+							<span x-text="font_selected_upper_text"></span>
 						</p>
 						<template x-for="(font, font_index) in font_families">
 							<span>
@@ -131,7 +131,7 @@
 					<div>
 						<p>
 							Font family: 
-							<span x-text="font_selected"></span>
+							<span x-text="font_selected_lower_text"></span>
 						</p>
 						<template x-for="(font, font_index) in font_families">
 							<span>
@@ -185,11 +185,15 @@
 				font_families: [
 					'Domine','"EB Garamond"','"Istok Web"','Lato','Merriweather','"Open Sans Condensed"','Oswald', 'serif', 'sans-serif'
 				],
-				font_selected: 'System default',
+				font_selected_upper_text: 'System default',
+				font_selected_lower_text: 'System default',
 				data: [],
 				changeAttribute: function(att) {
-					let element = document.querySelectorAll(att.class);
-					element.forEach((el) => {
+					//console.log(att);
+					let elements_by_class = document.querySelectorAll(att.class);
+					
+					// Change fonts by class 
+					elements_by_class.forEach((el) => {
 						if (att.type == 'size')
 						{
 							const fontSize_s = window.getComputedStyle(el).fontSize
@@ -198,11 +202,17 @@
 						}
 						else if (att.type == 'family') {
 							const fontFamily = window.getComputedStyle(el).fontFamily
-							//console.log(this.font_families[att.value]);
 							el.style.fontFamily = this.font_families[att.value];
-							this.font_selected = this.font_families[att.value];
 						}
-					})
+					});
+
+					// Update selected font family
+					if (att.type == 'family' && att.class == '.upper-line') {
+						this.font_selected_upper_text = this.font_families[att.value];
+					}
+					else if (att.type == 'family' && att.class == '.lower-line') {
+						this.font_selected_lower_text = this.font_families[att.value];
+					}
 				},
 			}
 		}
